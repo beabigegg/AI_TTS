@@ -1,0 +1,18 @@
+{
+  "__comment": "基于base_config调整关键参数",
+  "train": {
+    "batch_size": 8,
+    "epochs": 500,
+    "learning_rate": 5e-5,
+    "freeze_layers": ["text_encoder", "posterior_encoder"]
+  },
+  "data": {
+    "training_files": "data/processed/dataset_v2/metadata.csv",
+    "validation_files": "data/processed/dataset_v2/metadata_val.csv"
+  },
+  "model": {
+    "use_speaker_embedding": false,
+    "load_pretrained": true,
+    "pretrained_path": "outputs/models/v1/G_1000.pth"
+  }
+}

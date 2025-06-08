@@ -1,0 +1,28 @@
+{
+  "train": {
+    "batch_size": 16,
+    "epochs": 1000,
+    "learning_rate": 2e-4,
+    "weight_decay": 0.01,
+    "grad_clip_thresh": 1.0,
+    "num_workers": 4,
+    "lr_scheduler": {
+        "name": "cosine_annealing",
+        "eta_min": 0
+    }
+  },
+  "data": {
+    "sampling_rate": 22050,
+    "n_fft": 1024,
+    "n_mels": 80, 
+    "hop_length": 256,
+    "win_length": 1024
+  },
+  "model": {
+    "hidden_dim": 256,
+    "n_heads": 4,
+    "num_encoder_layers": 6,
+    "dim_feedforward_factor": 4,
+    "dropout": 0.1
+  }
+}

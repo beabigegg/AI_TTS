@@ -1,0 +1,19 @@
+{
+  "train": {
+    "batch_size": 32,
+    "epochs": 300,
+    "learning_rate": 1e-5,
+    "freeze_phoneme_encoder": true
+  },
+  "data": {
+    "training_files": "data/processed/dataset_v2/metadata.csv",
+    "phoneme_cache_path": "data/processed/dataset_v2/phonemes.pth"
+  },
+  "model": {
+    "type": "fastspeech2",
+    "pretrained": {
+      "model": "outputs/models/v1/fastspeech2.pth",
+      "ignore_layers": ["decoder.postnet"]
+    }
+  }
+}
